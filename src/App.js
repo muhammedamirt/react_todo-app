@@ -38,27 +38,28 @@ function App() {
                       }
                       return obj
                     }))
-                  }} value={todoVal.status} type="checkbox" name="" id={todoVal.id} />
-                  <p className={todoVal.status ? "success" : "pending"}>{todoVal.text} <br /> <span className='dateTime'>{todoVal.time}</span></p>
+                  }} value={todoVal.status} type="checkbox" name="" className='checkBox' id={todoVal.id} />
+                  <p>
+                    <span className={todoVal.status ? "success" : "pending"}>{todoVal.text}</span>
+                    <br />
+                    <span className='dateTime'>{todoVal.time}</span>
+                  </p>
 
                 </div>
                 <div className="right">
-                  <i className="fas fa-times" onClick={() => setTodos(todos.filter((obj, index) => {
-                    if (obj.id === todoVal.id) {
-                      console.log(index);
-                      let removeTask = [...todos]
-                      removeTask.splice(index, 1)
-                      console.log(removeTask.length);
-                      setTodos(removeTask)
+                  <i className="fas fa-times" onClick={() => setTodos(todos.filter(obj2 => {
+                    let temp;
+                    if (obj2.id !== todoVal.id) {
+                      temp = obj2
                     }
-                    return obj
+                    return temp;
                   }))}></i>
                 </div>
               </div>
             )
               : <div className="todo">
                 <div className="left">
-                  <p className='emptyValue'>Task is empty</p>
+                  <p className='emptyValue'>No Tasks....</p>
                 </div>
               </div>
           }

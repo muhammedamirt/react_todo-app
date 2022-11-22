@@ -55,7 +55,8 @@ h2 {
   font-size: larger;
   font-weight: 900;
   color: rgb(33, 32, 32);
-  margin-right: 5px;
+  margin-right: 10px;
+
 }
 
 i:hover{
@@ -72,8 +73,8 @@ i:hover{
 }
 .app .todos .todo {
   margin-top: 0.8em;
-  width: 20em;
-  height: 2em;
+  width: 50em;
+  height: auto;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -88,11 +89,12 @@ i:hover{
 }
 
 .app .todos .todo .left p {
-  margin-left: 3px; 
-  font-size: medium;
+  margin-left: 10px; 
+  font-size: large;
   font-weight: 700;
   font-style: normal;
   text-align: center;
+  max-width: 200px;
 }
 .emptyValue{
   text-align: center;
@@ -109,4 +111,9 @@ i:hover{
   font-size: 10px;
   color: gray;
   text-align: end;
+}
+
+.checkBox{
+height: 30px;
+width: 30px;
 }
