@@ -54,9 +54,16 @@ h2 {
   cursor: pointer;
   font-size: larger;
   font-weight: 900;
-  color: grey;
+  color: rgb(33, 32, 32);
   margin-right: 5px;
 }
+
+i:hover{
+  cursor: pointer;
+  color:red;
+  font-size: x-large;
+}
+
 .app .todos {
   display: flex;
   justify-content: center;
@@ -81,9 +88,25 @@ h2 {
 }
 
 .app .todos .todo .left p {
-  margin-left: 3px;
+  margin-left: 3px; 
   font-size: medium;
   font-weight: 700;
   font-style: normal;
-  color: grey;
+  text-align: center;
+}
+.emptyValue{
+  text-align: center;
+}
+
+.pending{
+  color: red;
+}
+
+.success{
+  color: green;
+}
+.dateTime{
+  font-size: 10px;
+  color: gray;
+  text-align: end;
 }
