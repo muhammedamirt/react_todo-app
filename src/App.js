@@ -8,7 +8,17 @@ function App() {
 
   const [todos, setTodos] = useState([])
   const [todo, setTodo] = useState("")
-
+  var a = new Date();
+      var weekdays = new Array(7);
+      weekdays[0] = "Sunday";
+      weekdays[1] = "Monday";
+      weekdays[2] = "Tuesday";
+      weekdays[3] = "Wednesday";
+      weekdays[4] = "Thursday";
+      weekdays[5] = "Friday";
+      weekdays[6] = "Saturday";
+      var r = weekdays[a.getDay()];
+      
   return (
     <div className="container">
       <div className="app">
@@ -18,7 +28,7 @@ function App() {
         </div>
         <div className="subHeading">
           <br />
-          <h2>Whoop, it's Monday 🌝 ☕ </h2>
+          <h2>Whoop, it's {r} 🌝 ☕ </h2>
         </div>
         <div className="input">
           <input type="text" value={todo} onChange={(e) => setTodo(e.target.value)} placeholder="🖊️ Add item..." />
@@ -66,7 +76,9 @@ function App() {
         </div>
       </div>
     </div>
+    
   );
+  
 }
 
 export default App;
